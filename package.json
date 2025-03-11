@@ -1,0 +1,29 @@
+{
+  "name": "file-converter-api",
+  "version": "1.0.0",
+  "description": "api which converts input files of different types (pdf, docx, pptx etc) into markdown files",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rebecabrk/file-converter-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rebecabrk/file-converter-api/issues"
+  },
+  "homepage": "https://github.com/Rebecabrk/file-converter-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mammoth": "^1.9.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1",
+    "pptx2json": "^0.0.10"
+  }
+}
