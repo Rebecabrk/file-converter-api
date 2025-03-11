@@ -34,6 +34,10 @@ exports.convertFile = async (req, res) => {
         fs.unlinkSync(filePath);
 
         const outputDir = path.join(__dirname, '../markdowns');
+        //  here we create the folder if it doesnt exist already
+        if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+         }
         const outputFilePath = path.join(outputDir, fileNameWithNewExt);
 
         fileUtils.writeFile(outputFilePath, markdownContent);
