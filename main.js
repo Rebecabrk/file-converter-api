@@ -2,7 +2,7 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
-// Require your Express server to start it
+// Start your Express server
 require('./server.js');
 
 function createWindow() {
@@ -10,15 +10,15 @@ function createWindow() {
     width: 900,
     height: 700,
     webPreferences: {
-      nodeIntegration: true, 
+      nodeIntegration: true,
       contextIsolation: false
     }
   });
 
-  // Load the index.html from the pages folder
-  win.loadFile(path.join(__dirname, 'pages', 'index.html'));
+  // Load the landing page from the pages folder
+  win.loadFile(path.join(__dirname, 'pages', 'Main.html'));
 
-  // Optional: open DevTools
+  // Optionally open DevTools:
   // win.webContents.openDevTools();
 }
 
